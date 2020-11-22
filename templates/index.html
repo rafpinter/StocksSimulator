@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+
+    <table class="table table-striped">
+        <thread>
+        <tr>
+            <th scope="col">Symbol</th>
+            <th scope="col">Name</th>
+            <th scope="col">Shares</th>
+            <th scope="col">Price</th>
+            <th scope="col">TOTAL</th>
+        </tr>
+        </thread>
+        <tbody>
+        {% for row in table %}
+            <tr>
+                <td>{{ row['symbol'] }}</td>
+                <td>{{ row['name'] }}</td>
+                <td>{{ row['quantity'] }}</td>
+                <td>${{ row['price'] }}</td>
+                <td>${{ row['total'] }}</td>
+            </tr>
+        {% endfor %}
+        </tr>
+        <tr>
+            <th>CASH</th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th id='cash'>${{ cash }}</th>
+        </tr>
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th >${{ total }}</th>
+        </tr>
+        </tbody>
+    </table>
+    <script>
+
+    </script>
+
+{% endblock %}
