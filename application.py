@@ -11,7 +11,6 @@ import urllib
 import pandas as pd
 import sqlite3
 
-# API_KEY pk_767ae94d341d4108b93c22ae5d57f8f4
 
 from helpers import apology, login_required, lookup, usd
 
